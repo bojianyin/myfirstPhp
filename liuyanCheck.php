@@ -1,15 +1,6 @@
 <?php
 	include("db.php");
-	class getVal{
-		function PDO_GET($key){
-			$val=$_GET[$key];
-			return $val;
-		}
-		function PDO_POST($key){
-			$val=$_POST[$key];
-			return $val;
-		}
-	}
+	include("inp.class.php");
 	$inp=new getVal();
 	$usen=$inp->PDO_POST('use');
 	$cont=$inp->PDO_POST('save');
@@ -26,7 +17,8 @@
 	$is=$link->query($sql);
 	if($is){
 		echo "插入成功";
-		echo "<script>location.href='liuyan.php'</script>";
+		header("Location:liuyan.php");
 	}else{
 		echo "插入失败";
+		exit;
 	}

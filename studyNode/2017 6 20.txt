@@ -1,0 +1,8 @@
+print_r($arr)   //打印数组
+关联数组、索引数组、多维数组
+is_array($el)   //判断是不是一个数组
+array_slice($arr,2,2，true)  截取数组   (数组本身，num，num，是否重置数组)
+array_splice($arr,2) 
+
+session_start()   //使用session
+header("Location:test.php")
